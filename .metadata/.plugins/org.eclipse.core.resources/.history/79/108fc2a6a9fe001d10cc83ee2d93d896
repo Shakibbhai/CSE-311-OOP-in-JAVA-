@@ -1,0 +1,74 @@
+import java.util.ArrayList;
+public class university {
+
+	ArrayList<person>persons;
+
+  private university(ArrayList<person> s) {
+
+    this.persons = persons;
+  }
+  
+  public String fullnames() {
+    String fullname="";
+
+    
+    for (int i = 0; i < s.size(); i++) {
+
+      if (i != s.size() - 1)
+        fullname = fullname + s.get(i).getFullName() + ",";
+
+      else
+        fullname = fullname + s.get(i).getFullName();
+    }
+    return fullname;
+  }
+
+  public person olderperson() {
+    person older = s.get(0);
+
+    for (person per : s) {
+      if (per.getAge() > older.getAge()) {
+        older = per;
+      }
+    }
+    return older;
+
+  }
+
+  public person youngerperson() {
+    person younger = s.get(0);
+
+    for (person per : s) {
+      if (per.getAge() < younger.getAge()) {
+        younger = per;
+      }
+    }
+    return younger;
+
+  }
+
+  public ArrayList<person> getvoters() {
+    ArrayList<person>s1 = new ArrayList<>();
+
+    for (person per : s) {
+      if (per.canVote()) {
+        s1.add(per);
+      }
+    }
+
+    return s1;
+
+  }
+
+  public int getNumberofemployee() {
+    int count = 0;
+
+    for (person per : s) {
+      if (per.getFullName().endsWith("(employee)")) {
+        count++;
+      }
+    }
+    return count;
+  }
+
+}

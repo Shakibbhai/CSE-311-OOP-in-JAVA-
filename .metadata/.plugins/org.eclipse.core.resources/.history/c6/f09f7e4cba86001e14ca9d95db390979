@@ -1,0 +1,41 @@
+import java.util.*;
+public class User implements Comparable<User>{
+	private String id;
+	private String fullName;
+	private String presentAddress;
+	private String userName;
+	public User(String id, String fullName, String presentAddress, String userName) {
+		this.id = id;
+		this.fullName = fullName;
+		this.presentAddress = presentAddress;
+		this.userName = userName;
+	}
+	public String getId() {
+		return id;
+	}
+	public void setId(String id) {
+		this.id = id;
+	}
+	public String getFullName() {
+		return fullName;
+	}
+	public void setFullName(String fullName) {
+		this.fullName = fullName;
+	}
+	public String getPresentAddress() {
+		return presentAddress;
+	}
+	public void setPresentAddress(String presentAddress) {
+		this.presentAddress = presentAddress;
+	}
+	public String getUserName() {
+		return userName;
+	}
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+	public int compareTo(User o) {
+		return userName.compareTo(o.userName);
+	}
+	
+}

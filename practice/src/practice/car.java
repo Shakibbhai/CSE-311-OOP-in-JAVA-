@@ -1,0 +1,18 @@
+package practice;
+
+public class car {
+	String make="bkash";
+	String car_name="toyoto";
+	int year=2023;
+	double price=1233423.340000;
+	
+	
+	void drive() {
+	System.out.println("u drive the car");	
+	}
+	
+	void brake() {
+		System.out.println("u break the car");	
+		}
+		
+}

@@ -1,0 +1,9 @@
+
+public class exceptn {
+public static void main(String []args) {
+	int x=10,y=0;
+	int result=x/y;
+	System.out.println("result is: "+result);
+	
+}
+}

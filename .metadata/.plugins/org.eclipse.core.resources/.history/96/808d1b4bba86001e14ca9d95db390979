@@ -1,0 +1,29 @@
+import java.util.*;
+public class Task1 {
+
+	public static void main(String[] args){
+		List<User> anotherList=new ArrayList<>();
+		Queue<User> userList=new PriorityQueue<>();
+		anotherList.add(new User("012","manik","dhaka","user1"));
+		anotherList.add(new User("013","munna","dhaka","aser1"));
+		anotherList.add(new User("012","manl","dhaka","aser1"));
+		Set<String>userName=new LinkedHashSet<>();
+		Set<String>idName=new LinkedHashSet<>();
+		for(User user:anotherList) {
+			if(!idName.contains(user.getId())&&!userName.contains(user.getUserName())) {
+				userName.add(user.getUserName());
+				idName.add(user.getId());
+				userList.add(user);
+			}
+		}
+		while(!userList.isEmpty()) {
+			User user=userList.poll();
+			System.out.print(user.getUserName()+" ");
+			System.out.println(user.getId());
+		}
+		
+
+	}
+	
+
+}

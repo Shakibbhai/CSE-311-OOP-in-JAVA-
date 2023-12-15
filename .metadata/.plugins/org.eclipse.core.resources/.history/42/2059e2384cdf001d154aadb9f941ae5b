@@ -1,0 +1,16 @@
+package practice;
+
+public class mainly {
+	public static void main(String [] args) {
+		car mycar=new car();
+		car mycar1=new car();
+		
+		System.out.println(mycar.car_name+"\n"+mycar.year+"\n"+mycar.price);
+		System.out.println(mycar1.car_name+"\n"+mycar1.year+"\n"+mycar1.price);
+
+			
+		
+		
+	}
+
+}

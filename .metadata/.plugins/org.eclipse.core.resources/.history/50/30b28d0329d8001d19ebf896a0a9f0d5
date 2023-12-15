@@ -1,0 +1,87 @@
+
+public class mainfunction {
+public static void main(String[] args) {
+
+		
+		Book b0 = new Book("Java","herbert schilt","1",10);
+		Book b1 = new Book("Statistics", "sheldon m.ross","2",32);
+		Book b2 = new Book("teach your self c" , "herbert schilt","3",5);
+		
+		Student s0 = new Student("Shakib",1452);
+		Student s1 = new Student("imtiaz",6);
+		Student s2 =new Student("Rahul",7);
+		
+
+		Library l = new Library(3,4);
+		System.out.println("Books that are availble at the moment:");
+		l.addBook(b0);
+		l.addBook(b1);
+		l.addBook(b2);
+		l.displayBooks();
+		System.out.println("\n\n");
+		
+		
+		
+		
+		
+		System.out.println("Students who have borrowed books:");
+		l.addStudent(s0);
+		l.addStudent(s1);
+		l.addStudent(s2);
+		l.displayStudents();
+		System.out.println("\n\n");
+		
+		
+		
+		
+		
+		
+		System.out.println("---Here i searched for the book 'Statistics'");
+		Book temp = l.findBook("Statistics");
+		temp.display();
+		System.out.println("\n\n");
+		
+		
+		
+		
+		
+		System.out.println("----here i tested borrowbook function:");
+		l.borrowBook("Java", s1);
+		l.borrowBook("Statistics", s0);
+		System.out.println("---here the num copies of java will reduce by 1 because it has been borrowed once");
+		b0.display();
+		b1.display();
+		System.out.println("\n\n");
+		
+		
+		
+		
+		
+		System.out.println("---here student related info will be printed:");
+		s1.display();
+		s0.display();
+		System.out.println("\n\n");
+		
+		
+		
+		
+		
+		System.out.println("-----here i tested return book function");
+		l.returnBook("Java",s1);
+		System.out.println("---here there will be one less book in Borrowed books");
+		s1.display();
+		System.out.println("\n\n");
+		
+		
+		
+		
+		
+		System.out.println("----here library book's numCount will be increased by 1\n");
+		System.out.println("return book is:\n");
+		b0.display();
+		
+
+	}
+
+
+}

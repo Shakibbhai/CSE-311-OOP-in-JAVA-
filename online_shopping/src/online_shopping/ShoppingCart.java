@@ -1,0 +1,39 @@
+package online_shopping;
+import java.util.ArrayList;
+
+public class ShoppingCart {
+	private ArrayList<CartItem> s1;
+
+	public ShoppingCart() {
+		s1=new ArrayList<>();
+	}
+	public void addItem(CartItem item){
+   		s1.add(item);
+	}
+	public void removeItem(CartItem item){
+   		s1.remove(item);
+	}
+public double TotalPrice() {
+	double totalprice=0;
+	for(CartItem x:s1) {
+		
+		totalprice+=x.calculateTotalPrice();
+	}
+	return totalprice;
+}
+public void displayCart() {
+	  System.out.println("Shopping Cart:");
+      System.out.println("------------------");
+      for(int i=0;i<s1.size();i++) {
+    	  System.out.println("Name: " + s1.get(i).getName());
+          System.out.println("Price: $" + s1.get(i).getPrice());
+          System.out.println("Quantity: " + s1.get(i).getQuantity());
+          System.out.println("Description: " + s1.get(i).getDescription());
+          System.out.println("------------------");
+      }
+      System.out.println("Total Price: $" + TotalPrice());
+	
+}
+	
+
+}

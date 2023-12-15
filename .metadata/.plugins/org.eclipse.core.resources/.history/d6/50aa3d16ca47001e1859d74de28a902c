@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class ecptinhndling {
+	public static void main(String []args) {
+		Scanner s =new Scanner(System.in);
+		try {
+		System.out.println("enter a number:");
+		int a=s.nextInt();
+		System.out.println("enter b number:");
+		int b=s.nextInt();
+		int result=a/b;
+		System.out.println("num1 is:"+a+"num2 is:"+b+"result is:"+result);
+		}
+		catch(Exception e1) {
+			System.out.println("the exception is:"+e1);
+			System.out.println("u must enter inteager:\nplz try again");
+			
+		}
+		
+		
+		
+		
+		
+	}
+
+}

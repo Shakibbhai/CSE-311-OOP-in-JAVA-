@@ -1,0 +1,39 @@
+
+//import java.util.Random;
+public class ecptinhndling {
+	public static void main(String []args) {
+		//int a=0,b=0,c=0;
+		//Random r=new Random();
+		
+		try {
+			int a=0;
+			
+			int b=42/a;
+			System.out.println("a="+a);
+			try {
+				if(a==1) a=a/(a-a);
+				if(a==2) {
+					int c[]= {1};
+					c[42]=99;
+				}
+			
+		
+		}catch(ArithmeticException e2) {
+			System.out.println("Division by zero."+e2);
+		}
+		
+		}catch(ArrayIndexOutOfBoundsException e1) {
+			System.out.println("exception is: "+e1);
+		
+	}
+		
+			System.out.println("after try catch");
+		
+		
+		
+		
+		
+		
+	}
+
+}

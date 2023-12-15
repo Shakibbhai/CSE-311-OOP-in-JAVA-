@@ -1,0 +1,11 @@
+package practice;
+
+public class bitwiselogic {
+public static void main(String[]args) {
+	int x=1,y=2;
+	int r;
+	boolean p=true;
+	r=p?x:y;
+	System.out.println(r);
+}
+}

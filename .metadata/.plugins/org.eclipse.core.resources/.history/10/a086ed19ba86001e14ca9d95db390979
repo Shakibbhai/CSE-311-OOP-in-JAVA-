@@ -1,0 +1,5 @@
+
+public interface Comperator<T> {
+	public int compareTO();
+
+}

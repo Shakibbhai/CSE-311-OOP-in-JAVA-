@@ -1,0 +1,14 @@
+package practice;
+import java.util.Scanner;
+
+public class justproblem {
+	public static void main(String[]args) {
+		int []a=new int[30];
+		Scanner s=new Scanner(System.in);
+		int n=s.nextInt();
+		System.println("input:");
+		
+		
+	}
+
+}
